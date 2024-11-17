@@ -1,0 +1,21 @@
+{
+  "name": "Discord-Bot-Template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "bunx tsx src/index.ts --watch",
+    "start": "bunx tsx src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.14.0",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
