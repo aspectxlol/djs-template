@@ -1,7 +1,12 @@
-import {Client, IntentsBitField, Partials} from 'discord.js'
+import {Client, Collection, IntentsBitField, Partials} from 'discord.js'
+import Command from "./Command";
+import BotEvent from "./Event";
 
 export default class Bot {
     client: Client
+    commands: Collection<string, Command>
+    events: Collection<string, BotEvent<any>>
+
     constructor() {
         this.client = new Client({
             intents: [
@@ -21,6 +26,9 @@ export default class Bot {
                 Partials.Reaction,
             ]
         })
+
+        this.commands = new Collection()
+        this.events = new Collection()
     }
 
     async start() {

@@ -1,5 +1,7 @@
 import 'dotenv/config'
 import Bot from './structures/Bot'
 
-const bot = new Bot()
-bot.start()
+(async () => {
+    const bot = new Bot()
+    await bot.start()
+})()
